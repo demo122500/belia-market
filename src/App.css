@@ -1,0 +1,450 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  background: white;
+}
+
+@media (min-width: 1300px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1200px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: auto;
+  padding: 25px 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.bg-pink {
+  background: #fe3675;
+}
+
+.container {
+  max-width: 80%;
+}
+
+.headerWrapper .top-strip {
+  padding: 8px 0px;
+}
+
+.headerWrapper .top-strip p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.headerWrapper .header {
+  width: 100%;
+  height: auto;
+  padding: 10px 0px;
+}
+
+.logoWrapper img {
+  width: 100%;
+}
+
+.headerWrapper .header .part2 .countryDrop {
+  width: 170px;
+  height: 50px;
+  min-width: 170px;
+  text-align: left;
+  justify-content: flex-start !important;
+  color: #000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.7) !important;
+  border-radius: 7px !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  padding: 12px 15px;
+}
+
+.headerWrapper .header .part2 .countryDrop span.ml-auto svg {
+  opacity: 0.7;
+}
+
+.headerWrapper .header .part2 .countryDrop .label {
+  font-size: 12px !important;
+  text-transform: capitalize !important;
+  color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.headerWrapper .header .part2 .countryDrop .info {
+  line-height: 16px;
+}
+
+.headerWrapper .header .part2 .countryDrop .name {
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  color: #fe3675 !important;
+  font-weight: 700;
+}
+
+.locationModal .MuiPaper-elevation {
+  padding: 25px;
+}
+
+.cartTab button {
+  background: #fff1ee !important;
+}
+
+.cartTab button svg {
+  color: #fe3675 !important;
+}
+
+.price {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 700;
+}
+
+nav .navPart1 .catWrapper {
+  z-index: 100;
+}
+
+nav .navPart1 .catWrapper .sideBarNav {
+  transition: all 0.2 ease-in-out;
+  visibility: hidden;
+}
+
+.sideBarNav ul li .sub-menu {
+  opacity: 1;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.sideBarNav ul li:hover .sub-menu {
+  opacity: 1;
+  left: 100%;
+  visibility: inherit;
+}
+
+nav .navPart1 .catWrapper .sideBarNav.open {
+  height: auto;
+  opacity: 1;
+  visibility: inherit;
+}
+
+nav .navPart2 ul {
+  margin-bottom: 0px;
+}
+
+nav .navPart2 ul li a button {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 100px;
+}
+
+nav .navPart2 ul li a {
+  text-decoration: none;
+}
+
+nav .navPart2 ul li a button:hover {
+  background: #ffe5ed;
+  color: #fe3675;
+}
+
+nav .navPart2 ul li .sub-menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+nav .navPart2 ul li:hover .sub-menu {
+  opacity: 1;
+  top: 100%;
+  visibility: inherit;
+}
+
+.countryList li button {
+  justify-content: flex-start !important;
+}
+
+.countryList li button.active {
+  background: #e2e2e2 !important;
+}
+
+.homeBanner .slick-dots {
+  position: absolute;
+  bottom: 10px;
+}
+
+.homeBanner .slick-arrow,
+.productRow .slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  background: rgb(255, 255, 255);
+  border-radius: 100px;
+  font-family: FontAwesome !important;
+}
+
+.homeBanner .slick-arrow.slick-prev {
+  margin-left: 5px;
+}
+
+.homeBanner .slick-arrow.slick-next {
+  margin-right: 5px;
+}
+
+.homeBanner .slick-arrow:hover {
+  background: rgb(255, 255, 255, 0.9);
+}
+
+.homeBanner .slick-arrow.slick-prev::before,
+.productRow .slick-arrow.slick-prev::before {
+  font-family: FontAwesome !important;
+  content: "\f104";
+  color: #000;
+}
+
+.homeBanner .slick-arrow.slick-next::before,
+.productRow .slick-arrow.slick-next::before {
+  font-family: FontAwesome !important;
+  content: "\f105";
+  color: #000;
+}
+
+.productRow .slick-arrow.slick-prev::before,
+.productRow .slick-arrow.slick-next::before {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.productRow .slick-arrow {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.productRow .slick-arrow.slick-prev {
+  margin-left: 5px;
+}
+
+.productRow .slick-arrow.slick-next {
+  margin-right: 5px;
+}
+
+.item .imgWrapper .infoWishlist button:hover svg {
+  color: #fff !important;
+}
+
+.item .imgWrapper .infoWishlist {
+  transition: all 0.3s ease-in-out;
+}
+
+.item .imgWrapper img {
+  transition: all 0.3s ease-in-out;
+}
+
+.item .imgWrapper:hover img {
+  transform: scale(1.1);
+}
+
+.item .imgWrapper .infoWishlist button {
+  transition: all 0.3s ease-in-out;
+}
+
+.item .imgWrapper:hover .infoWishlist {
+  opacity: 1;
+  right: 16px;
+}
+
+.imgWrapper .productInfo button a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #fe3675;
+}
+
+.imgWrapper .productInfo button:hover a {
+  color: #fff;
+}
+
+.custom-prev-btn,
+.custom-next-btn {
+  z-index: 10;
+}
+
+.homeProducts .sticky {
+  position: sticky;
+  top: 20px;
+}
+
+/* swiper button customization */
+.custom-prev-btn,
+.custom-next-btn {
+  position: absolute;
+  top: 60%;
+  z-index: 10;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-prev-btn.disabled,
+.custom-next-btn.disabled {
+  background: #f9f9f9;
+  border-color: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.custom-prev-btn:hover:not(.disabled),
+.custom-next-btn:hover:not(.disabled) {
+  background: #eee;
+  color: black;
+}
+
+.footerLink ul li {
+  cursor: pointer;
+  transition: all 0.3 ease-in-out;
+}
+
+.footerLink .submenu ul li:hover {
+  color: #fe3675;
+}
+
+.productModal .MuiPaper-elevation {
+  padding: 75px;
+  width: 1200px !important;
+  min-width: 1000px !important;
+  max-width: 1200px !important;
+}
+
+.zoomSlider .slick-slide {
+  padding: 10px !important;
+}
+
+.zoomSlider * {
+  outline: none !important;
+}
+
+.zoomSlider .item {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.zoomSlider .slick-current .item {
+  border: 1px solid #fe3675 !important;
+}
+
+.zoomSlider .slick-arrow {
+  top: 55%;
+  zoom: 80% !important;
+}
+
+.zoomSlider .slick-arrow.slick-next {
+  right: -2% !important;
+}
+
+.zoomSlider .slick-arrow.slick-prev {
+  left: -5% !important;
+}
+
+/* product listing */
+/* sidebar */
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 2px !important;
+}
+
+.css-19opgx6-MuiFormControlLabel-root .MuiFormControlLabel-label {
+  font-size: 14px;
+}
+
+.css-1umw9bq-MuiSvgIcon-root {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 10px;
+}
+
+.css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.Mui-checked, .css-imrjgg-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+  color: #fe3675 !important;
+}
+
+.productListingSidebar .scroll::-webkit-scrollbar {
+  width: 5px !important;
+  height: 5px !important;
+}
+
+.range-slider {
+  height: 4px !important;
+}
+
+.range-slider .range-slider__thumb {
+  width: 15px !important;
+  height: 15px !important;
+  background: #fe3675 !important;
+}
+
+.range-slider .range-slider__range {
+  height: 4px !important;
+  background: #fe3675 !important;
+}
+
+.productListingPage .showBy button svg{
+  color: #000;
+  opacity: 0.3;
+}
+
+.productListingPage .showBy button.act svg{
+  opacity: 1;
+}
+
+
+
+.productListingPage .showBy button:hover svg{
+  opacity: 1;
+}
+
+.productDisplayCount .MuiPaper-root {
+  width: 100px !important;
+}
+
+.productCard {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid white;
+
+}
+
+.productCard:hover {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.productCard .centerImg {
+  place-self: center !important;
+}
